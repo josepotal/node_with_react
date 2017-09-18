@@ -45,7 +45,16 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  auth: PropTypes.obj.isRequired
+  auth: PropTypes.oneOfType([
+    PropTypes.shape({
+      credits: PropTypes.Number
+    }),
+    PropTypes.bool
+  ])
+};
+
+Header.defaultProps = {
+  auth: null
 };
 
 function mapStateToProps(state) {
