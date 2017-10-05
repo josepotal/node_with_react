@@ -45,7 +45,7 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  auth: PropTypes.obj.isRequired
+  auth: PropTypes.obj
 };
 
 function mapStateToProps(state) {
